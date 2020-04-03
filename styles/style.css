@@ -31,6 +31,35 @@ footer {
     background-color: #fff;
 }
 
+#contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-input-text{
+    border: none;
+    //background-color: #cccccc;
+    font-family: arial;
+    font-size: 12pt;
+}
+
+#search-input-text:focus{
+    outline: none;
+}
+
+#search-bar {
+    display: grid;
+    grid-template-columns: 30px 400px 30px;
+    border: solid;
+    border-width: 1px;
+    border-color: #e2e2e2;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 30px;
+}
+
 .search-button{
     padding: 10px 13px 10px 13px;
     margin: 5px;
