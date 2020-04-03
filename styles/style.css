@@ -13,7 +13,7 @@ main {
 header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 200px 1fr 250px;
     grid-template-areas: "links-left . links-right";
     width: 100%;
     margin: 0px;
@@ -81,6 +81,30 @@ footer {
     outline: none;
 }
 
+#apps-button{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    height: 16px;
+    width: 16px;
+    background: #FFF;
+    align-self: center;
+    margin: 0px 15px 0px 5px;
+    padding: 7px;
+}
+
+.app-square{
+    background: #666;
+    height: 100%;
+    width: 100%;
+}
+
+#apps-button:hover > .app-square{
+    background: #222;
+}
+
+
 #search-bar {
     display: grid;
     grid-template-columns: 30px 400px 30px;
@@ -117,12 +141,14 @@ button{
     position: relative;
     right: 11px;
     justify-self: right;
+    align-items: center;
     display: flex;
     grid-area: links-right;
 }
 
 #header-links-left{
     position: relative;
+    align-items: center;
     left: 7px;
     grid-area: links-left;
 }
