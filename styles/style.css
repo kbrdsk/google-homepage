@@ -38,6 +38,22 @@ footer {
     align-items: center;
 }
 
+#search-icon{
+    background-image: url('../images/desktop_searchbox_sprites302_hr.png');
+    height: 20px;
+    background-size: 20px 41px;
+    background-repeat: no-repeat;
+}
+
+#voice-input-button{
+    background-image: url('../images/googlemic_color_24dp.png');
+    height: 20px;
+    width: 20px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+
 #search-input-text{
     border: none;
     //background-color: #cccccc;
@@ -55,7 +71,7 @@ footer {
     border: solid;
     border-width: 1px;
     border-color: #e2e2e2;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
     margin: 15px;
     border-radius: 30px;
 }
