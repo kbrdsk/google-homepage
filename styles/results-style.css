@@ -1,15 +1,81 @@
-header {
+#page-header {
     display: grid;
     align-items: center;
     grid-template-columns: 140px 740px minmax(150px, 1fr) 150px;
-    grid-auto-rows: 83px 40px;
+    grid-template-rows: 83px 40px;
     grid-template-areas: 
     "logo search-bar . profile-buttons"
     ".    navbar     . .";
-    background: #555;
     border-bottom: solid;
     border-bottom-width: 1px;
     border-bottom-color: #e2e2e2;
+}
+
+#navbar{
+    grid-area: navbar;
+    display: flex;
+    //background-color: #0a0;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link-box{
+    //background-color: #a0a;
+    display: flex;
+    height: 40px;
+    padding: 0px 6px 0px 6px;
+    margin: 0px 5px 0px 5px;
+    align-items: center;
+}
+
+#alle-box{
+    border-bottom: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #4285f4;
+    padding-top: 3px;
+    height: 33px;
+}
+
+#alle-text{
+    color: #4285f4;
+}
+
+#meer-icon{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 2px;
+    height: 10px;
+    width: 2px;
+    background: #FFF;
+    align-self: center;
+    margin-right: 4px;
+}
+
+.meer-icon-square{
+    background: #888;
+    height: 100%;
+    width: 100%;
+}
+.nav-link-icon{
+    height: 40%;
+    margin-right: 4px;
+    opacity: 60%;
+}
+
+#alle-icon{
+    opacity: 100%;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+.nav-link-text{
+    font-family: arial;
+    font-size: 10pt;
+    color: #666;
 }
 
 #search-bar {
@@ -43,9 +109,7 @@ header {
     align-self: center;
 }
 
-#navbar{
-    grid-area: navbar;
-}
+
 
 #search-bar:hover{
     border-color: #fff;
