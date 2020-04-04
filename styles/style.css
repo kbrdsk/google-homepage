@@ -17,7 +17,7 @@ header {
     grid-template-areas: "links-left . links-right";
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 7px;
     background-color: #fff;
     align-items: center;
 }
@@ -72,7 +72,6 @@ footer {
 
 #search-input-text{
     border: none;
-    //background-color: #cccccc;
     font-family: arial;
     font-size: 12pt;
 }
@@ -122,12 +121,17 @@ footer {
 }
 
 .search-button{
+    border: none;
     padding: 10px 13px 10px 13px;
     margin: 5px;
     border-radius: 5px;
     background-color: #f2f2f2;
     color: #666666;
     font-size: 11pt;
+}
+
+.search-button:focus{
+    outline: none;
 }
 
 .search-button:hover{
