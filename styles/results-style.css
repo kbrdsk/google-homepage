@@ -1,3 +1,118 @@
+main {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: 180px 650px minmax(150px, 1fr) 150px;
+    grid-template-rows: 40px 40px auto auto 60px 60px;
+    grid-template-areas:
+    ".      search-summary   .      .     "
+    ".      search-tips      .      .     "
+    ".      search-results   .      .     "
+    ".      related-searches .      .     "
+    ".      page-nav         .      .     "
+    "footer footer           footer footer";
+    font-family: arial;
+    font-size: 11pt;
+    color: #333;
+}
+
+.footer-link{
+    color: #666666;
+    font-size: 11pt;
+    margin: 0px 7px 0px 7px;
+}
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 180px 650px minmax(150px, 1fr) 150px;
+    grid-template-areas: ". links . .";
+    background-color: #f2f2f2;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: #e2e2e2;
+}
+
+#search-results{
+    grid-area: search-results;
+    display: flex;
+    flex-direction: column;
+    font-size: 11pt;
+}
+
+.page-result{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.page-links{
+    display: grid;
+    grid-template-areas:
+    "url-preview url-menu translate"
+    "title       title    title";
+    grid-template-columns: auto auto 1fr;
+}
+
+.info-summary{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 4px;
+    color: #777;
+    padding-bottom: 8px;
+}
+
+.info-description{
+    font-weight: bold;
+}
+
+.page-url-preview{
+    grid-area: url-preview;
+    color: #333;
+}
+
+.page-title{
+    grid-area: title;
+    margin-top: 8px;
+}
+
+.translate-page-link{
+    grid-area: translate;
+    color: #1a0dab;
+    display: none;
+}
+
+.url-menu{
+    grid-area: url-menu;
+}
+
+.page-title{
+    color: #1a0dab;
+    font-size: 16pt;
+}
+
+.page-preview{
+    margin: 5px 0px 5px 0px;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+b {
+    font-weight: bold;
+}
+
+#search-summary{
+    grid-area: search-summary;
+    color: #888;
+}
+
+#search-tips{
+    grid-area: search-tips;
+}
+
 #page-header {
     display: grid;
     align-items: center;
@@ -5,7 +120,7 @@
     grid-template-rows: 83px 40px;
     grid-template-areas: 
     "logo search-bar . profile-buttons"
-    ".    navbar     . .";
+    ".    navbar     . .              ";
     border-bottom: solid;
     border-bottom-width: 1px;
     border-bottom-color: #e2e2e2;
@@ -53,10 +168,22 @@
     margin-right: 4px;
 }
 
+.subpage-links{
+    display: flex;
+    align-items: center;
+}
+
+.subpage-divider-square{
+    background: #aaa;
+    height: 2px;
+    width: 2px;
+    margin: 0px 6px 0px 6px;
+}
+
 .meer-icon-square{
     background: #888;
-    height: 100%;
-    width: 100%;
+    height: 2px;
+    width: 2px;
 }
 .nav-link-icon{
     height: 40%;
