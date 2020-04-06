@@ -2,7 +2,7 @@ main {
     display: grid;
     padding-top: 20px;
     grid-template-columns: 180px 620px minmax(150px, 1fr) 150px;
-    grid-template-rows: 40px 40px auto auto 60px 60px;
+    grid-template-rows: 40px 40px auto auto auto 60px;
     grid-template-areas:
     ".      search-summary   .      .     "
     ".      search-tips      .      .     "
@@ -22,6 +22,63 @@ main {
 }
 
 .footer-link:hover {
+    color: #333;
+}
+
+#result-page-nav {
+    margin: 30px 0px 25px 0px;
+}
+
+#page-nav-G-container, .page-nav-link, #page-nav-gle-container, #current-page{
+    height: 57px;
+    display: grid;
+    grid-template-rows: 43px auto;
+    justify-items: center;
+}
+
+#page-nav-G, #current-page-number, .page-nav-number, #page-nav-gle, #page-nav-next-arrow {
+    background: url('../images/nav_logo299.webp');
+    height: 43px;
+}
+
+#page-nav-G {
+    width: 40px;
+    background-position: -14px 0px;
+}
+#current-page-number{
+    width: 20px;
+    background-position: -54px 0px;
+}
+.page-nav-number{
+    width: 20px;
+    background-position: -75px 0px;
+}
+#page-nav-gle {
+    width: 45px;
+    background-position: -97px 0px;
+}
+
+#page-nav-next-arrow{
+    width: 100%;
+    background-position: -150px 4px;
+    background-repeat: no-repeat;
+}
+
+#result-page-nav{
+    grid-area: page-nav;
+    display: flex;
+    justify-content: center;
+}
+
+.page-nav-link{
+    color: #4285f4;
+}
+
+.page-nav-link:hover {
+    text-decoration: underline;
+}
+
+#current-page {
     color: #333;
 }
 
