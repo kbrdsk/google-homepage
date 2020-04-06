@@ -1,7 +1,7 @@
 main {
     display: grid;
     padding-top: 20px;
-    grid-template-columns: 180px 650px minmax(150px, 1fr) 150px;
+    grid-template-columns: 180px 620px minmax(150px, 1fr) 150px;
     grid-template-rows: 40px 40px auto auto 60px 60px;
     grid-template-areas:
     ".      search-summary   .      .     "
@@ -15,21 +15,55 @@ main {
     color: #333;
 }
 
-.footer-link{
+
+.footer-text {
     color: #666666;
     font-size: 11pt;
-    margin: 0px 7px 0px 7px;
+}
+
+.footer-link:hover {
+    color: #333;
 }
 
 footer {
     grid-area: footer;
     display: grid;
-    grid-template-columns: 180px 650px minmax(150px, 1fr) 150px;
-    grid-template-areas: ". links . .";
+    grid-template-columns: 180px 680px minmax(150px, 1fr) 150px;
+    grid-template-areas: ". content . .";
     background-color: #f2f2f2;
     border-top: solid;
     border-top-width: 1px;
     border-top-color: #e2e2e2;
+}
+
+#footer-content{
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#location-icon {
+    background: #777;
+    border-radius: 50%;
+    height: 8pt;
+    width: 8pt;
+}
+
+#footer-info-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#location {
+    color: #333;
+}
+
+#footer-links-bottom a{
+    margin-right: 20px;
 }
 
 #search-results{
