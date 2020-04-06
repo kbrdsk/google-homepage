@@ -1,20 +1,49 @@
+#page-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 140px 740px minmax(150px, 1fr);
+    grid-template-rows: 83px 40px;
+    grid-template-areas: 
+    "logo search-bar  profile-buttons"
+    ".    navbar      .              ";
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #e2e2e2;
+}
+
 main {
     display: grid;
     padding-top: 20px;
-    grid-template-columns: 180px 620px minmax(150px, 1fr) 150px;
+    grid-template-columns: 180px 620px minmax(150px, 1fr);
     grid-template-rows: 40px 40px auto auto auto 60px;
     grid-template-areas:
-    ".      search-summary   .      .     "
-    ".      search-tips      .      .     "
-    ".      search-results   .      .     "
-    ".      related-searches .      .     "
-    ".      page-nav         .      .     "
-    "footer footer           footer footer";
+    ".      search-tips      .     "
+    ".      search-summary   .     "
+    ".      search-results   .     "
+    ".      related-searches .     "
+    ".      page-nav         .     "
+    "footer footer           footer";
     font-family: arial;
     font-size: 11pt;
     color: #333;
 }
 
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 180px 680px minmax(150px, 1fr);
+    grid-template-areas: ". content .";
+    background-color: #f2f2f2;
+    border-top: solid;
+    border-top-width: 1px;
+    border-top-color: #e2e2e2;
+}
+
+@media (max-width: 1030px){
+    #page-header, main, footer {
+        width: 1030px
+    }
+}
 
 .footer-text {
     color: #666666;
@@ -82,17 +111,6 @@ main {
     color: #333;
 }
 
-footer {
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: 180px 680px minmax(150px, 1fr) 150px;
-    grid-template-areas: ". content . .";
-    background-color: #f2f2f2;
-    border-top: solid;
-    border-top-width: 1px;
-    border-top-color: #e2e2e2;
-}
-
 #related-searches {
     grid-area: related-searches;
 }
@@ -117,10 +135,10 @@ footer {
 }
 
 #location-icon {
-    background: #777;
-    border-radius: 50%;
-    height: 8pt;
-    width: 8pt;
+    background: #888;
+    border-radius: 100%;
+    height: 7pt;
+    width: 7pt;
 }
 
 #footer-info-top{
@@ -223,19 +241,6 @@ b {
 
 #search-tips{
     grid-area: search-tips;
-}
-
-#page-header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 140px 740px minmax(150px, 1fr) 150px;
-    grid-template-rows: 83px 40px;
-    grid-template-areas: 
-    "logo search-bar . profile-buttons"
-    ".    navbar     . .              ";
-    border-bottom: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #e2e2e2;
 }
 
 #navbar{
